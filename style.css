@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,52 +14,98 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     justify-content: center;
     overflow: hidden;
+    padding: 20px;
 }
-#name{
+
+#name {
     text-transform: uppercase;
     letter-spacing: 4px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 2px black;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 2rem;  
 }
-#myName{
-    font-size: 20px;
+
+#myName {
+    font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 2px black;
     margin-top: 10px;
 }
-.clock{
-    display: flex;
 
+.clock {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    gap: 10px;  
 }
-.clock div{
-    margin: 5px;
+
+.clock div {
     position: relative;
+    text-align: center;
 }
-.clock span{
-    width: 100px;
-    height: 80px;
+
+.clock span {
+    width: 80px; 
+    height: 70px;
     background-color: burlywood;
-    opacity: .8;
+    opacity: 0.8;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-    text-shadow: 2px 2x 2px black;
+    font-size: 2rem; 
+    border-radius: 10px;
 }
-.clock .text{
-    height: 30px;
-    font-size: 10px;
-    letter-spacing: 2px;
+
+.clock .text {
+    height: 25px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
     background-color: rgb(223, 173, 108);
     opacity: 0.8;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    #name {
+        font-size: 1.5rem;
+    }
+    #myName {
+        font-size: 1rem;
+    }
+    .clock span {
+        width: 70px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    .clock .text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 1.2rem;
+    }
+    #myName {
+        font-size: 0.9rem;
+    }
+    .clock {
+        align-items: center;
+    }
+    .clock span {
+        width: 60px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    .clock .text {
+        font-size: 0.6rem;
+    }
 }
